@@ -15,11 +15,11 @@ namespace DavisPostInstall;
 class Installer {
 
 	public static function CreateProject() {
-		@exec('cd web && npm install && node_modules/.bin/bower install && node_modules/.bin/gulp');
+		@exec('cd web/theme && npm install && npm run production');
 	}
 
 	public static function PostInstall() {
-		@exec('cd web && npm install && node_modules/.bin/bower install && node_modules/.bin/gulp');
+		@exec('cd web/theme && npm install && npm run production');
 	}
 
 }

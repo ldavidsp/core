@@ -47,10 +47,6 @@ class Routing {
 		self::add($path, $callable, $name, 'PUT');
 	}
 
-	/*public static function update($path, $callable, $name = NULL) {
-		self::add($path, $callable, $name, 'UPDATE');
-	}*/
-
 	protected static function add($path, $callable, $name, $method) {
 		$route = new Route($path, $callable);
 		self::$routes[$method][] = $route;
@@ -83,13 +79,6 @@ class Routing {
 					}
 				}
 			}
-/*			if (self::$routes['UPDATE']) {
-				foreach (self::$routes['UPDATE'] as $route) {
-					if ($route->match (self::$url)) {
-						return $route->call();
-					}
-				}
-			}*/
 		}
 		$base_url = BaseUrl::url();
 		Views::go('error.404',['base_url'=>$base_url]);

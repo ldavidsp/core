@@ -26,7 +26,7 @@ class Storage {
 	}
 
 	public function upload($name, $path) {
-		include Directory::Home('app/config/storage.php');
+		include Directory::Home('web/app/config/storage.php');
 		$root = $storage['drive'][self::$storage]['root'].'/'.$storage['drive'][self::$storage]['folder'];
 		if(!file_exists($root)){
 			$command = new Command('cd '.$storage['drive'][self::$storage]['root'].' && mkdir '.$storage['drive'][self::$storage]['folder']);

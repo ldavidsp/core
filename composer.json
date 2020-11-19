@@ -1,5 +1,5 @@
 {
-  "name": "davidsolorzano20/core",
+  "name": "ldavidsp/core",
   "description": "Core for framework Davis",
   "license": "MIT",
   "authors": [
@@ -8,19 +8,12 @@
       "email": "luisnic20@gmail.com"
     }
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/davidsolorzano20/core.git"
-  },
-  "bugs": {
-    "url": "https://github.com/davidsolorzano20/core/issues"
-  },
-  "homepage": "https://github.com/davidsolorzano20/core#readme",
+  "homepage": "https://github.com/ldavidsp/core#readme",
   "minimum-stability": "dev",
   "require": {},
   "extra": {
     "branch-alias": {
-      "dev-master": "2.0.0-dev"
+      "dev-master": "2.1.0-dev"
     }
   },
   "autoload": {

@@ -5,7 +5,7 @@
  * Date: 7/10/17
  * Time: 6:55 PM
  */
-namespace Davis\Requires;
+namespace Davis\vendor;
 
 /**
  * Class Requires
