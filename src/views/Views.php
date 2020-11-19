@@ -26,7 +26,7 @@ class Views {
 	}
 
 	public static function go($views, $array = []) {
-		require Directory::Dir().'vendor/ldavidsp/core/src/loader/loader.php';
+		require Directory::Dir().'/../vendor/ldavidsp/core/src/loader/loader.php';
 		$twig_views = '';
 		if (!empty($views)) {
 			$file = str_replace('', '',$views);

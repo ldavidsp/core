@@ -24,11 +24,11 @@ class Routing {
 	private static $nameRoutes = [];
 
 	public function __construct() {
-		self::$url = $_GET['url'];
+		self::$url = $_SERVER['REQUEST_URI'];
 	}
 
 	public static function Load() {
-		self::$url = $_GET['url'];
+		self::$url = $_SERVER['REQUEST_URI'];
 	}
 
 	public static function get($path, $callable, $name = NULL) {
@@ -65,29 +65,15 @@ class Routing {
 					return $route->call();
 				}
 			}
-			if (self::$routes['DELETE']) {
-				foreach (self::$routes['DELETE'] as $route) {
-					if ($route->match (self::$url)) {
-						return $route->call();
-					}
-				}
-			}
-			if (self::$routes['PUT']) {
-				foreach (self::$routes['PUT'] as $route) {
-					if ($route->match (self::$url)) {
-						return $route->call();
-					}
-				}
-			}
 		}
 		$base_url = BaseUrl::url();
-		Views::go('error.404',['base_url'=>$base_url]);
+		Views::go('error.404',['base_url' => $base_url]);
 	}
 
 	public function url($name, $params = []) {
 		if (!isset(self::$nameRoutes[$name])) {
 			$base_url = BaseUrl::url();
-			Views::go('error.404',['base_url'=>$base_url]);
+			Views::go('error.404',['base_url' => $base_url]);
 		}
 		self::$nameRoutes[$name] = $this->getURL($params);
 

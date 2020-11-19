@@ -19,11 +19,11 @@ class Loader {
 	}
 
 	public static function Load() {
-		return require Directory::Home('vendor/ldavidsp/core/src/loader/loader.php');
+		return require Directory::Home('/../vendor/ldavidsp/core/src/loader/loader.php');
 	}
 
 	public static function Routing() {
-		return require Directory::Home('web/develop/routes/web.php');
+		return require Directory::Home('/develop/routes/web.php');
 	}
 
 }
